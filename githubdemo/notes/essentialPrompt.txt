@@ -1,1 +1,4 @@
-visual studio 開發 react + ts 專案, 如何發佈到 GitHub 的pages
+visual studio 開發 react + ts 專案, 如何發佈到 GitHub 的pages, 我的名稱是feter-liang, 我的專案名稱是 githubdemo
+
+npm install gh-pages --save-dev
+npm install react-router-dom @types/react-router-dom
