@@ -21,16 +21,28 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Debug directory
+        run: |
+          pwd
+          ls -la
+          
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '18'
           
       - name: Install Dependencies
-        run: npm install
+        working-directory: ./githubdemo
+        run: |
+          pwd
+          ls -la
+          npm install
         
       - name: Build
-        run: npm run build
+        working-directory: ./githubdemo
+        run: |
+          npm run build
+          ls -la dist/
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -38,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './githubdemo/dist'
 
   deploy:
     environment:
@@ -50,4 +62,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
