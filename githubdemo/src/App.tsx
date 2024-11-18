@@ -1,12 +1,13 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import { useState } from 'react'
-import ViteLogo from '/vite.svg'
+import ViteLogo from '../public/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)
 
   return (
-    <>
+    <Router basename={import.meta.env.DEV ? '/' : '/githubdemo'}>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={ViteLogo} className="logo" alt="Vite logo" />
@@ -17,7 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount((prevCount) => prevCount + 1)}>
           count is {count}
         </button>
         <p>
@@ -27,7 +28,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </Router>
   )
 }
 
