@@ -1,4 +1,4 @@
-import { BrowserRouter as Router } from 'react-router-dom'
+import { HashRouter as Router } from 'react-router-dom'
 import { useState } from 'react'
 import './App.css'
 
@@ -7,7 +7,7 @@ function App() {
   const currentTime = new Date().toLocaleString('zh-TW', { timeZone: 'Asia/Taipei' })
 
   return (
-    <Router basename={import.meta.env.DEV ? '/' : '/githubdemo'}>
+    <Router>
       <div style={{ 
         padding: '40px', 
         textAlign: 'center',
