@@ -34,14 +34,19 @@ jobs:
       - name: Install Dependencies
         working-directory: ./githubdemo
         run: |
+          echo "Current directory:"
           pwd
+          echo "Directory contents:"
           ls -la
+          echo "Installing dependencies..."
           npm install
         
       - name: Build
         working-directory: ./githubdemo
         run: |
+          echo "Building project..."
           npm run build
+          echo "Build output:"
           ls -la dist/
         
       - name: Setup Pages
