@@ -2,3 +2,8 @@ visual studio 開發 react + ts 專案, 如何發佈到 GitHub 的pages, 我的�
 
 npm install gh-pages --save-dev
 npm install react-router-dom @types/react-router-dom
+
+
+
+
+設置一個既能在 Visual Studio 中執行，又能發佈到 GitHub Pages 的配置

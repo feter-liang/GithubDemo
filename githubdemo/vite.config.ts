@@ -5,4 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'serve' ? '/' : '/githubdemo/',
+  server: {
+    port: 5173,
+    strictPort: true
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true
+  }
 }))
