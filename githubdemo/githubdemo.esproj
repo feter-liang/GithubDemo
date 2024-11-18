@@ -6,5 +6,14 @@
     <BuildCommand>npm run build</BuildCommand>
     <ProductionBuildCommand>npm run build</ProductionBuildCommand>
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
+    <DefaultItemExcludes>$(DefaultItemExcludes);dist\**</DefaultItemExcludes>
+    <ShouldRunNpmInstall>true</ShouldRunNpmInstall>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="public\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptConfiguration Include="tsconfig.json" />
+  </ItemGroup>
 </Project>
