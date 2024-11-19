@@ -64,7 +64,7 @@ function App() {
           borderTop: '1px solid #eee',
           paddingTop: '20px'
         }}>
-          <p>這是一個簡單的部署測試頁面2</p>
+          <p>這是一個簡單的部署測試頁面</p>
           <p>如果您看到這個頁面，表示部署已經成功！</p>
         </footer>
       </div>
